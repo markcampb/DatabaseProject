@@ -1,7 +1,5 @@
 package games;
 
-import java.util.UUID;
-
 public class Wheel 
 {
 	private ListNode First;
