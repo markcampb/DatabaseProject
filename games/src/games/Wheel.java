@@ -22,7 +22,7 @@ public class Wheel
 
 	
 	 
-	public void Wheel()  // This Function creates a fixed list of one to 10. With 10 different node pointing to each other
+	public void Wheelcreate()  // This Function creates a fixed list of one to 10. With 10 different node pointing to each other
 	{
 		ListNode A = new ListNode(1);
 		ListNode B = new ListNode(2);
@@ -69,12 +69,4 @@ public class Wheel
 	}
 	
 
-
-        
-  
-    
-
-	
-	
-	
 }
