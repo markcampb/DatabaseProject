@@ -4,12 +4,8 @@ import java.util.UUID;
 
 public class Wheel 
 {
-	private ListNode last;
 	private ListNode First;
-	private int result;
-
-	
-		private class ListNode 
+	private class ListNode 
 		{
 			private ListNode next;
 			private int data;
@@ -23,12 +19,7 @@ public class Wheel
 		}
 	
 		
-	public Wheel()
-	{
-		last = null;
-
-		
-	}
+	
 	
 
 	
@@ -57,7 +48,6 @@ public class Wheel
 		I.next = J;
 		J.next = A;
 		
-		last = J; // THis just shows which Node in the List is Currently Last
 		First = A; //this just shows which Node in the List is Currently First
 	
 		
