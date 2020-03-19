@@ -1,5 +1,5 @@
 package games;
-
+import java.util.Random; 
 public class Wheel 
 {
 	private ListNode First;
@@ -55,17 +55,23 @@ public class Wheel
 	
 	
 	
-	public void show ()    // This function was just to show that the Linked List works fine
+	public void spinTheWheel ()    // This function was just to show that the Linked List works fine
 	{
+		
+		 Random rand = new Random();
 		 int i = 0;
+		 
+		 
+		 
+		 int b = rand.nextInt(1000);
 		ListNode n = First;
-		while (n.next!=null & i <20)
+		while (n.next!=null & i <b)
 		{ 
-			System.out.println(n.data);
+			
 			n=n.next;
 			i++;// this stops the list from going over itself unlimitedly
 		}
-		
+		System.out.println(n.data);
 	}
 	
 

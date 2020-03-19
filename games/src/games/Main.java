@@ -10,7 +10,7 @@ public class Main {
 	
 	
 		createlinkedlist.Wheelcreate();//creates the list of to 10
-		createlinkedlist.show();//shows that the list is a circular linked list
+		createlinkedlist.spinTheWheel();//shows that the list is a circular linked list
 		
 	} 
 
