@@ -3,20 +3,20 @@ import java.io.*;
 import java.lang.Math;
 
 public class play {
-	 public void category() 
+	 public void category()  
 	    { 
 	        // define the range 
 	        int max = 4; 
-	        int min = 1; 
+	        int min = 1;  
 	        int range = max - min + 1; 
 	  
 	        // generate random numbers within 1 to 4
-	        for (int i = 0; i < 4; i++) { 
-	            int rand = (int)(Math.random() * range) + min; 
+	        
+	            int randCategory = (int)(Math.random() * range) + min; 
 	  
-	            System.out.println(rand); 
-	        } 
-	    } 
+	            System.out.println("The Category is number " + randCategory); 
+	        
+	    }  
 	 //The category function randomizes the category therefore each player gets a different category 
 	 //i used numbers because it looks easier 
 	 //1-Person, 2-Place, 3-Thing, 4-Phrases
@@ -29,11 +29,11 @@ public class play {
 	        int range = max - min + 1; 
 	  
 	        // generate random numbers within 1 to 5
-	        for (int i = 0; i < 5; i++) { 
-	            int rand = (int)(Math.random() * range) + min; 
+	       
+	            int randPuzzle = (int)(Math.random() * range) + min; 
 	  
-	            System.out.println(rand); 
-	        } 
+	            System.out.println("The puzzle is " +randPuzzle); //in the futre this will show the puzzle not the number
+	        
 	    } 
 	 //The puzzle function randomizes the puzzles for each category there are 5 puzzles
 	 //Based on the number the will get a different puzzle. 
@@ -49,7 +49,7 @@ public class play {
 			}
 	
 	
-	public void ReadFile(String[] args)
+/*	public void ReadFile(String[] args)
 	    {
 		 	String text = "";
 		    int lineNumber;
@@ -68,7 +68,7 @@ public class play {
 		    }
 		    System.out.println(" The specific Line is: " + text);
 		  }
-	    
+ */
 }
 
 
