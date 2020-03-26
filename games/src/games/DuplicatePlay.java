@@ -1,4 +1,4 @@
-package Game;
+package gamess;
 import java.io.*;
 import java.lang.Math;
 public class DuplicatePlay {

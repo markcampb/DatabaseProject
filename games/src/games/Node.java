@@ -1,4 +1,4 @@
-package Game;
+package games;
 
 public class Node {
 	private Node NextNode;

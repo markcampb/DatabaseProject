@@ -1,4 +1,4 @@
-package Game;
+package games;
 
 public class Queue {
 	private Node Front;
@@ -20,6 +20,7 @@ public class Queue {
 	public void setRear(Node n) {
 		Rear=n;
 	}
+	
 	public void Enqueue(char v, char c) {
 		Node temp= new Node(v,c);
 		if (temp!=null) {
@@ -38,6 +39,7 @@ public class Queue {
 			System.out.println("The list is full. Cannot add another node.");
 		}
 	}
+	
 	public Guesses Dequeue() {
 		Guesses datatoReturn = null;
 		if (Front==Rear) {

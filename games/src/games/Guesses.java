@@ -1,4 +1,4 @@
-package Game;
+package games;
 public class Guesses {
 	private char vowel;
 	private char constant;
