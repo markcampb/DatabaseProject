@@ -1,23 +1,44 @@
 package games;
 import java.io.*;
 import java.lang.Math;
-
+import java.util.Arrays;
 public class play {
+	
+	
+	
 	 public void category()  
 	    { 
+		 
 	        // define the range 
-	        int max = 4; 
-	        int min = 1;  
+	        int max = 3; 
+	        int min = 0;  
 	        int range = max - min + 1; 
 	  
 	        // generate random numbers within 1 to 4
 	        
+	        
+	        String[] cate = new String[4];  //this arrays is used to show which category is being played 
+			
+			cate [0]= "Person";
+			cate [1]= "Place";
+			cate [2]= "thing";
+			cate [3]= "Phrases";
+					
+	        
+	        
+	        
 	            int randCategory = (int)(Math.random() * range) + min; 
 	  
-	            System.out.println("The Category is number " + randCategory); 
+	            System.out.println("The Category is  " + cate[randCategory]); 
 	        
 	    }  
-	 //The category function randomizes the category therefore each player gets a different category 
+	
+	 
+	 
+	 
+	 
+	 
+	//The category function randomizes the category therefore each player gets a different category 
 	 //i used numbers because it looks easier 
 	 //1-Person, 2-Place, 3-Thing, 4-Phrases
 	 
@@ -41,6 +62,13 @@ public class play {
 	 
 	 
 	public void choices() {
+		
+		
+		
+		
+		
+		
+		
 		 System.out.println("The Categories are as follows:");
 		 System.out.println("**********1-Person************");
 		 System.out.println("**********2-Place*************");

@@ -68,7 +68,7 @@ public class Wheel
 			n=n.next;
 			i++;// this stops the list from going over itself unlimitedly
 		}
-		System.out.println("The wheel has landed on " +n.data);
+		System.out.println("The wheel has landed on $" +n.data);
 	
 	}
 	

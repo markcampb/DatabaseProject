@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 
+
+
 public class Main {
 
 	public static void main(String[] args) throws IOException 
@@ -19,35 +21,30 @@ public class Main {
 		
 	    Scanner Scanner = new Scanner (System.in);
 
-	    String confirmation = Scanner.nextLine();
+	    String confirmation = Scanner.nextLine().trim();
          
 	    Scanner.close();
-	    
-       if (same (confirmation, startCon))
-	       {
-    	   System.out.println("The Game Has begun\n");   
-	       Wheel createlinkedlist = new Wheel();
-	       play plays = new play();
+	  
+	       if (same (confirmation, startCon))
+		       { 
+	    	   System.out.println("The Game Has begun\n");
+	    	   
+	    	   
+		       Wheel createlinkedlist = new Wheel();
+		       play plays = new play();
+		       
+		       
+		       createlinkedlist.Wheelcreate();//creates the list of to 10
+		       
+		       System.out.println("The wheel is now spinning player\n");
+		       
+		       
+		       plays.choices();
+		        
+		      createlinkedlist.spinTheWheel();//shows that the list is a circular linked list
+		       plays.category();
+		       plays.puzzle();
 	       
-	       
-	       
-	       createlinkedlist.Wheelcreate();//creates the list of to 10
-	       
-	       System.out.println("The wheel is now spinning player\n");
-	       
-	       
-	       plays.choices();
-	        
-	      createlinkedlist.spinTheWheel();//shows that the list is a circular linked list
-	       plays.category();
-	       plays.puzzle();
-	       
-	       
-	       
-	       
-	       
-			
-			
 		 
 	       }
        
