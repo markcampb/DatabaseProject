@@ -27,13 +27,12 @@ public class Main {
 	    Scanner.close();
 	  
 	       if (same (confirmation, startCon))
-		       { 
+		       {   
 	    	   System.out.println("The Game Has begun\n");
 	    	    
 	    	    
 		       Wheel createlinkedlist = new Wheel();
 		       DuplicatePlay plays = new DuplicatePlay();
-		       
 		       
 		       createlinkedlist.Wheelcreate();//creates the list of to 10
 		       

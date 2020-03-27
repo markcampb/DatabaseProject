@@ -9,32 +9,45 @@ public class DuplicatePlay {
 	        int min = 0;  
 	        int range = max - min + 1; 
 	  
-	        // generate random numbers within 1 to 4 
-	        for (int i = 0; i < 4; i++) { 
+	       
 	            int rand = (int)(Math.random() * range) + min; 
 	  
-	            System.out.println(rand); 
-	        }  
+	            
+	            
+	        String [] cate = new String [4] ;
+ 	           cate[0] = "Person";
+ 	          cate[1] = "Place";
+ 	         cate[2] = "Thing";  
+ 	        cate[3] = "Phrases";
+ 	        
+ 	         
+	            System.out.println(cate[rand]); 
 	    } 
 	 //The category function randomizes the category therefore each player gets a different category 
 	 //i used numbers because it looks easier 
 	 //1-Person, 2-Place, 3-Thing, 4-Phrases
-	 
+		public void choices() {
+			 System.out.println("The Categories are as follows:");
+			 System.out.println("**********1-Person************");
+			 System.out.println("**********2-Place*************");
+			 System.out.println("**********3-Thing*************");
+			 System.out.println("**********4-Phrases***********");
+				}   
 	 public  void puzzle() 
 	    { 
 	        // define the range 
 	        int max = 5; 
-	        int min = 1; 
+	        int min = 1;  
 	        int range = max - min + 1;
 	       
 	  
 	        // generate random numbers within 1 to 5
-	        for (int i = 0; i < 5; i++) { 
+	       
 	            int rand = (int)(Math.random() * range) + min; 
 	  
 	            System.out.println(rand); 
 	          //This function is used to read from the different files and display a specific line 
-		        String text = "";
+		        String text = ""; 
 			    try {
 			      FileReader readfile = new FileReader("myfile.txt");
 			      BufferedReader readbuffer = new BufferedReader(readfile);
@@ -50,20 +63,14 @@ public class DuplicatePlay {
 			    }
 			    System.out.println(" The specific Line is: " + text);
 		        
-	        } 
+	        
 	    } 
 	 //The puzzle function randomizes the puzzles for each category there are 5 puzzles
 	 //Based on the number the will get a different puzzle. 
 	 //in the file class each puzzle has a number assigned 
 	 
 	 
-	public void choices() {
-		 System.out.println("The Categories are as follows:");
-		 System.out.println("**********1-Person************");
-		 System.out.println("**********2-Place*************");
-		 System.out.println("**********3-Thing*************");
-		 System.out.println("**********4-Phrases***********");
-			}    
+ 
 	
 	//This function stores all the information in the Person file into an array 
 	//Thus allowing us to remove substring from the strings
