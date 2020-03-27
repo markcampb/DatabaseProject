@@ -10,7 +10,7 @@ public Node() {
 	NextNode= null;
 	PrevNode=null;
 }
-public Node(char v, char c) {
+public Node(char v, char c) { 
 	Data= new Guesses(v,c);
 	NextNode= null;
 	PrevNode=null;

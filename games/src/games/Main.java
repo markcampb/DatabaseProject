@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 
 
-public class Main {
+public class Main extends DuplicatePlay {
 
 	public static void main(String[] args) throws IOException 
 	{  
@@ -32,7 +32,7 @@ public class Main {
 	    	    
 	    	    
 		       Wheel createlinkedlist = new Wheel();
-		       DuplicatePlay plays = new DuplicatePlay();
+		       DuplicatePlay plays = new DuplicatePlay();  
 		       
 		       createlinkedlist.Wheelcreate();//creates the list of to 10
 		       
@@ -43,8 +43,12 @@ public class Main {
 		        
 		      createlinkedlist.spinTheWheel();//shows that the list is a circular linked list
 		       plays.category();
-		       plays.puzzle();
+		    //   plays.puzzle();
 	        
+		   	//DuplicatePlay game= new DuplicatePlay();    
+		   
+		   		plays.pieToWin();
+;		       
 		 
 	       }
        
@@ -73,22 +77,22 @@ public class Main {
 		//puzzlefiles.WriteToPFile();
 		//puzzlefiles.CreateThing();
 		//puzzlefiles.WriteToTFile();
-		//puzzlefiles.CreatePhrases();
+	//	puzzlefiles.CreatePhrases();
 		//puzzlefiles.WriteToQFile();
 		// This function call runs the Actual game play, based on the decision 
 		// or phase in the game the appropriate function will be called
 		//Coming from the Play class
-		//Play game= new Play();
+	
 		//game.choices();
 		//game.category();
 		//game.puzzle();
 		//game.readFileT();
 		//game.readFileP();
 		//game.readFileQ();
-		//game.replacepuzzle();
-		//game.replacePpuzzle();
-		//game.replaceQpuzzle();
-		//game.replaceTpuzzle();
+		
+		
+	
+		
 		
 		
 		// This function call control the guesses for the puzzle,

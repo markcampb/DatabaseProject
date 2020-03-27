@@ -4,7 +4,7 @@ public class Guesses {
 	private char constant;
 	
 	public Guesses(){
-		vowel='a';
+		vowel='a'; 
 		constant='y';	
 	}
 	public Guesses(char vowel, char constant) {

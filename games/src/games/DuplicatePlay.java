@@ -2,27 +2,61 @@ package games;
 import java.io.*;
 import java.lang.Math;
 public class DuplicatePlay {
-	 public void category() 
+	public static  String [] cate = new String [4] ;
+	int pie;
+	 public int category() 
+	  
 	    { 
 	        // define the range 
-	        int max = 3; 
+	        int max = 3;   
 	        int min = 0;  
 	        int range = max - min + 1; 
 	  
 	       
-	            int rand = (int)(Math.random() * range) + min; 
+	           int  rand = (int)(Math.random() * range) + min; 
 	  
 	            
 	            
-	        String [] cate = new String [4] ;
+	  
  	           cate[0] = "Person";
  	          cate[1] = "Place";
  	         cate[2] = "Thing";  
- 	        cate[3] = "Phrases";
+ 	        cate[3] = "Phrases"; 
  	        
  	         
-	            System.out.println(cate[rand]); 
-	    } 
+	            System.out.println("The Category is " +cate[rand]);
+				 pie = rand;
+				return pie;
+	    }
+	 
+	 public void pieToWin()
+	 {
+		DuplicatePlay game= new DuplicatePlay(); 
+		System.out.println("  "); 
+		
+		 			if (pie == 0)  
+					{
+						game.replacepuzzle();
+					}
+					else if (pie == 1)
+					{
+						game.replacePpuzzle();
+					}
+					
+					else if (pie == 3)
+					{
+						game.replaceQpuzzle();
+					}
+					
+					else if (pie == 2)
+					{
+						game.replaceTpuzzle();
+					}
+					
+		 
+	 }
+	 
+	 
 	 //The category function randomizes the category therefore each player gets a different category 
 	 //i used numbers because it looks easier 
 	 //1-Person, 2-Place, 3-Thing, 4-Phrases
@@ -35,11 +69,11 @@ public class DuplicatePlay {
 				}   
 	 public  void puzzle() 
 	    { 
-	        // define the range 
-	        int max = 5; 
-	        int min = 1;  
+	        // define the range   
+	        int max = 4; 
+	        int min = 0;  
 	        int range = max - min + 1;
-	       
+	        
 	  
 	        // generate random numbers within 1 to 5
 	       
@@ -49,16 +83,16 @@ public class DuplicatePlay {
 	          //This function is used to read from the different files and display a specific line 
 		        String text = ""; 
 			    try {
-			      FileReader readfile = new FileReader("myfile.txt");
+			      FileReader readfile = new FileReader("Person.txt");
 			      BufferedReader readbuffer = new BufferedReader(readfile);
 			      for (rand = 1; rand < 5; rand++) {
-			        if (rand == 2) {
+			        if (rand == 2) { 
 			          text = readbuffer.readLine();
 			        } else
 			          readbuffer.readLine();
 			      }
 			      readbuffer.close();
-			    } catch (IOException e) {
+			    } catch (IOException e) { 
 			      e.printStackTrace();
 			    }
 			    System.out.println(" The specific Line is: " + text);
@@ -74,20 +108,22 @@ public class DuplicatePlay {
 	
 	//This function stores all the information in the Person file into an array 
 	//Thus allowing us to remove substring from the strings
-	public void replacepuzzle(String[] args) {
+	public void replacepuzzle() {
 		String[] myArray= new String[5];
-		myArray[0] = " Marshall Mathers";
+		myArray[0] = "Marshall Mathers";
 		myArray[1] = "Beyonce Knowles-Carter";
 		myArray[2] = "Jennifer Lopez";
 		myArray[3] = "Ciara Harris";
 		myArray[4] = "Aubrey Graham";	
 		
-		for(int i=0;i<myArray.length;i++) {
-			String newmyArray = myArray[i].replaceAll("([m,z])","");
+		 int max = 4;   
+	     int min = 0;  
+	     int range = max - min + 1; 
+	     int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
+		 String newmyArray = myArray[i].replaceAll("([a,c,,r,n,l,t,o,p])","_"); // chooses the puzzle based on the number generated
+		 System.out.println(newmyArray);
 			
-			System.out.println(newmyArray);
-			
-		}
+		
 
 	}
 	//This function stores all the information in the Place file into an array 
@@ -95,17 +131,22 @@ public class DuplicatePlay {
 	public void replacePpuzzle() {
 		String[] myArray = new String[5];
 		myArray[0] = "  Palawan Island";
-		myArray[1] = "Antelope Canyon"; 
+		myArray[1] = "Antelope Canyon";   
 		myArray[2] = "Moraine Lake ";
 		myArray[3] = " Cliffs of Moher";
 		myArray[4] = "Whitehaven Beach";	
 		
-		for(int i=0;i<myArray.length;i++) {
-			String newmyArray=myArray[i].replaceAll("([a,o])","");
-			
-			System.out.println(newmyArray);
-		}
+		 int max = 4;     
+	     int min = 0;   
+	     int range = max - min + 1; 
+	     int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
+		 String newmyArray = myArray[i].replaceAll("([s,m,o,i,l,h,c,v])","_"); // chooses the puzzle based on the number generated
+		 System.out.println(newmyArray);
+		
 	}
+	
+	
+	
 	//This function stores all the information in the Thing file into an array 
 	//Thus allowing us to remove substring from the strings
 	public void replaceTpuzzle() {
@@ -116,29 +157,39 @@ public class DuplicatePlay {
 		myArray[3] = "Cherry Blossom";
 		myArray[4] = "Lamborghini Veneno";	
 		
-		for(int i=0;i<myArray.length;i++) {
-			String newmyArray = myArray[i].replaceAll("([c,r])","");
-			
-			System.out.println(newmyArray);
-		}
+		 int max = 4;   
+	     int min = 0;  
+	     int range = max - min + 1; 
+	     int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
+		 String newmyArray = myArray[i].replaceAll("([,w,o,i,b,m,B,j,l,u,e])","_"); // chooses the puzzle based on the number generated
+		 System.out.println(newmyArray);
+		
 	}
+	
+	
+	
+	
 	//This function stores all the information in the Phrase file into an array 
 	//Thus allowing us to remove substring from the strings
 	public void replaceQpuzzle() {
 		String[] myArray= new String[5];
 		myArray[0] = "Just do the best you can.";
-		myArray[1] = "Live as if you were to die tomorrow. Learn as if you were to live forever";
+		myArray[1] = "Live as if you were to die tomorrow. 
 		myArray[2] = "That which does not kill us makes us stronger.";
 		myArray[3] = " Be yourself; everyone else is already taken.";
 		myArray[4] = "If opportunity doesn’t knock, build a door.";	
 		
-		for(int i=0;i<myArray.length;i++) {
-			String newmyArray = myArray[i].replaceAll("([h,w])","");
+		
 			
-			System.out.println(newmyArray);
-		}
+			 int max = 4;   
+		     int min = 0;  
+		     int range = max - min + 1; 
+		     int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
+			 String newmyArray = myArray[i].replaceAll("([s,w,o,i,k,l,u,,g,])","_"); // chooses the puzzle based on the number generated
+			 System.out.println(newmyArray);
+		
 	}
-
+	
 }
 
 

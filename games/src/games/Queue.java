@@ -51,7 +51,7 @@ public class Queue {
 			Front=Front.getNextNode();
 			temp=null;
 		}
-		return datatoReturn;
+		return datatoReturn; 
 	}
 	
 	public Guesses QueueFront() {
