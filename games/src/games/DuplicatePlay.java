@@ -5,16 +5,16 @@ public class DuplicatePlay {
 	 public void category() 
 	    { 
 	        // define the range 
-	        int max = 4; 
-	        int min = 1; 
+	        int max = 3; 
+	        int min = 0;  
 	        int range = max - min + 1; 
 	  
-	        // generate random numbers within 1 to 4
+	        // generate random numbers within 1 to 4 
 	        for (int i = 0; i < 4; i++) { 
 	            int rand = (int)(Math.random() * range) + min; 
 	  
 	            System.out.println(rand); 
-	        } 
+	        }  
 	    } 
 	 //The category function randomizes the category therefore each player gets a different category 
 	 //i used numbers because it looks easier 

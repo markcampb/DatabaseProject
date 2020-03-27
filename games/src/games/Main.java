@@ -13,7 +13,7 @@ public class Main {
 	public static void main(String[] args) throws IOException 
 	{  
 		// TODO Auto-generated method stub
-		/* 
+		
 		final String startCon = "yes";
 
 	
@@ -29,8 +29,8 @@ public class Main {
 	       if (same (confirmation, startCon))
 		       { 
 	    	   System.out.println("The Game Has begun\n");
-	    	   
-	    	   
+	    	    
+	    	    
 		       Wheel createlinkedlist = new Wheel();
 		       DuplicatePlay plays = new DuplicatePlay();
 		       
@@ -45,20 +45,19 @@ public class Main {
 		      createlinkedlist.spinTheWheel();//shows that the list is a circular linked list
 		       plays.category();
 		       plays.puzzle();
-	       
+	        
 		 
 	       }
        
-       else	{ 
-    	   
-    	   System.out.println("maybe another time then" );   
-    	   
-    	   
+       else
+       { 
+     	   System.out.println("maybe another time then" );   
+
        }
 	       
 	       
 	       
-	       */
+	       
 		
 		
 		
@@ -96,15 +95,15 @@ public class Main {
 		// This function call control the guesses for the puzzle,
 		// count the number of occurrences for the letters
 		
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);   
+	//	@SuppressWarnings("resource")
+		//Scanner sc = new Scanner(System.in);   
         // Character input 
-		char guess= sc.next().charAt(0); 
-		System.out.println("Please enter your answer:"+guess);
-		Guesses g= new Guesses();
-		g.Check(guess);
-		g.display();
-		Queue q= new Queue();
+		//char guess= sc.next().charAt(0); 
+		//System.out.println("Please enter your answer:"+guess);
+		//Guesses g= new Guesses();
+		//g.Check(guess);
+		//g.display();
+		//Queue q= new Queue();
 		
 	}
 
