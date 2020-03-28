@@ -12,7 +12,7 @@ public Node() {
 }
 public Node(char v, char c) { 
 	Data= new Guesses(v,c);
-	NextNode= null;
+	NextNode= null;  
 	PrevNode=null;
 }
 public Node(Guesses data) {

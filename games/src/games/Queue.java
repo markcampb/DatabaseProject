@@ -7,7 +7,7 @@ public class Queue {
 	public Queue() {
 		Front=null;
 		Rear=null;
-	}
+	}  
 	public Node getFront() {
 		return Front;
 	}

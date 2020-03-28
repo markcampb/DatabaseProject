@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
-
+ 
 
 
 
@@ -24,13 +24,13 @@ public class Main extends DuplicatePlay {
 
 	    String confirmation = Scanner.nextLine().trim();
          
-	    Scanner.close();
+	 
 	  
 	       if (same (confirmation, startCon))
 		       {   
 	    	   System.out.println("The Game Has begun\n");
-	    	    
-	    	    
+	    	     
+	    	     
 		       Wheel createlinkedlist = new Wheel();
 		       DuplicatePlay plays = new DuplicatePlay();  
 		       
@@ -44,7 +44,7 @@ public class Main extends DuplicatePlay {
 		      createlinkedlist.spinTheWheel();//shows that the list is a circular linked list
 		       plays.category();
 		    //   plays.puzzle();
-	        
+	         
 		   	//DuplicatePlay game= new DuplicatePlay();    
 		   
 		   		plays.pieToWin();

@@ -1,12 +1,18 @@
 package games;
 import java.io.*;
 import java.lang.Math;
-public class DuplicatePlay {
+import java.util.Scanner;
+import java.io.BufferedReader;
+
+import java.io.IOException;
+
+public class DuplicatePlay  extends Guesses{
 	public static  String [] cate = new String [4] ;
 	int pie;
+	char answerGuessed=' ';
 	 public int category() 
 	  
-	    { 
+	    {  
 	        // define the range 
 	        int max = 3;   
 	        int min = 0;  
@@ -25,7 +31,7 @@ public class DuplicatePlay {
  	        
  	         
 	            System.out.println("The Category is " +cate[rand]);
-				 pie = rand;
+				 pie = 0;
 				return pie;
 	    }
 	 
@@ -36,7 +42,7 @@ public class DuplicatePlay {
 		
 		 			if (pie == 0)  
 					{
-						game.replacepuzzle();
+						game.replacepuzzle();  
 					}
 					else if (pie == 1)
 					{
@@ -104,7 +110,7 @@ public class DuplicatePlay {
 	 //in the file class each puzzle has a number assigned 
 	 
 	 
- 
+   
 	
 	//This function stores all the information in the Person file into an array 
 	//Thus allowing us to remove substring from the strings
@@ -116,16 +122,83 @@ public class DuplicatePlay {
 		myArray[3] = "Ciara Harris";
 		myArray[4] = "Aubrey Graham";	
 		
-		 int max = 4;   
+		 int max = 4;    
 	     int min = 0;  
 	     int range = max - min + 1; 
-	     int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
-		 String newmyArray = myArray[i].replaceAll("([a,c,,r,n,l,t,o,p])","_"); // chooses the puzzle based on the number generated
+	  int i = 0;
+	   //  int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
+	     
+	     
+	     String storage = myArray[i]; // stores the word before it is updated
+	     
+	     
+	     
+		 String newmyArray = myArray[i].replaceAll("([a,t])","'_'"); // chooses the puzzle based on the number generated
 		 System.out.println(newmyArray);
-			
+		 
+		 System.out.println(storage);
+		 //---------- guess if the character is there -------------//
+		 
+		  
+		 
 		
-
+		 Guesses.Check();
+		     
+		int grandCheck = storage.indexOf(guessedChar); // this will allow us to know if the variable there
+		System.out.println(grandCheck);
+		
+		    if (grandCheck > 0) {
+		    	System.out.println(storage.indexOf(guessedChar)); 
+		    	
+		    	System.out.println("you smart");
+				 
+		    }
+		    
+		    else if (grandCheck < 0) {
+		  System.out.println(storage.indexOf(guessedChar)); 
+		  
+		  System.out.println("this shit nahh work bredda guess again");
+		    }
+		    
+		    
+		  
+		  
+		  
+/*
+		 1
+		 2
+		 3
+		 4
+		 5
+		 6
+		 7
+		 8
+		 9
+		 10
+		 
+		 
+	*/	 
+		 
 	}
+	
+	public void  stor ()
+	{
+		if (answerGuessed == 0)
+		{
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//This function stores all the information in the Place file into an array 
 	//Thus allowing us to remove substring from the strings
 	public void replacePpuzzle() {
@@ -140,7 +213,7 @@ public class DuplicatePlay {
 	     int min = 0;   
 	     int range = max - min + 1; 
 	     int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
-		 String newmyArray = myArray[i].replaceAll("([s,m,o,i,l,h,c,v])","_"); // chooses the puzzle based on the number generated
+		 String newmyArray = myArray[i].replaceAll("([s,m,o,i,l,h,c,v])","'_'"); // chooses the puzzle based on the number generated
 		 System.out.println(newmyArray);
 		
 	}
@@ -161,7 +234,7 @@ public class DuplicatePlay {
 	     int min = 0;  
 	     int range = max - min + 1; 
 	     int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
-		 String newmyArray = myArray[i].replaceAll("([,w,o,i,b,m,B,j,l,u,e])","_"); // chooses the puzzle based on the number generated
+		 String newmyArray = myArray[i].replaceAll("([,w,o,i,b,m,B,j,l,u,e])","'_'"); // chooses the puzzle based on the number generated
 		 System.out.println(newmyArray);
 		
 	}
@@ -174,7 +247,7 @@ public class DuplicatePlay {
 	public void replaceQpuzzle() {
 		String[] myArray= new String[5];
 		myArray[0] = "Just do the best you can.";
-		myArray[1] = "Live as if you were to die tomorrow. 
+		myArray[1] = "Live as if you were to die tomorrow.";
 		myArray[2] = "That which does not kill us makes us stronger.";
 		myArray[3] = " Be yourself; everyone else is already taken.";
 		myArray[4] = "If opportunity doesn’t knock, build a door.";	
@@ -185,7 +258,7 @@ public class DuplicatePlay {
 		     int min = 0;  
 		     int range = max - min + 1; 
 		     int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
-			 String newmyArray = myArray[i].replaceAll("([s,w,o,i,k,l,u,,g,])","_"); // chooses the puzzle based on the number generated
+			 String newmyArray = myArray[i].replaceAll("([s,w,o,i,k,l,u,,g,])","'_'"); // chooses the puzzle based on the number generated
 			 System.out.println(newmyArray);
 		
 	}
