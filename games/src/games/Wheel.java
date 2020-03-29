@@ -18,22 +18,22 @@ public class Wheel
 	
 		
 	
-	
+	 
 
 	
 	 
 	public void Wheelcreate()  // This Function creates a fixed list of one to 10. With 10 different node pointing to each other
 	{
-		ListNode A = new ListNode(1);
-		ListNode B = new ListNode(2);
-		ListNode C = new ListNode(3);
-		ListNode D = new ListNode(4);
-		ListNode E = new ListNode(5);
-		ListNode F = new ListNode(6);
-		ListNode G = new ListNode(7);
-		ListNode H = new ListNode(8);
-		ListNode I = new ListNode(9);
-		ListNode J = new ListNode(10);
+		ListNode A = new ListNode(1000);
+		ListNode B = new ListNode(2000);
+		ListNode C = new ListNode(3000);
+		ListNode D = new ListNode(4000);
+		ListNode E = new ListNode(5000);
+		ListNode F = new ListNode(6000);
+		ListNode G = new ListNode(7000);
+		ListNode H = new ListNode(8000);
+		ListNode I = new ListNode(9000);
+		ListNode J = new ListNode(10000);
 		
 		A.next = B;
 		B.next = C;
@@ -61,9 +61,9 @@ public class Wheel
 		 Random rand = new Random();
 		 int i = 0;
 		 
+		  
 		 
-		 
-		 int b = rand.nextInt(1000);
+		 int b = rand.nextInt(100000);
 		ListNode n = First;
 		while (n.next!=null & i <b)
 		{ 
