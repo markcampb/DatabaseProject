@@ -127,7 +127,7 @@ public class DuplicatePlay  extends Guesses{
 	     int range = max - min + 1; 
 	  int i = 0;
 	   //  int  i = (int)(Math.random() * range) + min;  // help to Choose a random puzzle 
-	     
+	     // the above code is not to be commented out, only did thaht because i wanted to focus on running thru the code and developing everything else using just one puzzle. it already does the randomly select category and quizes right
 	     
 	     String storage = myArray[i]; // stores the word before it is updated
 	     
@@ -142,9 +142,9 @@ public class DuplicatePlay  extends Guesses{
 		  
 		 
 		
-		 Guesses.Check();
+		 Guesses.Check(); 
 		     
-		int grandCheck = storage.indexOf(guessedChar); // this will allow us to know if the variable there
+		int grandCheck = storage.indexOf(guessedChar); // this will allow us to know if the variable they are guess its right and wrong.
 		System.out.println(grandCheck);
 		
 		    if (grandCheck > 0) {
@@ -157,27 +157,12 @@ public class DuplicatePlay  extends Guesses{
 		    else if (grandCheck < 0) {
 		  System.out.println(storage.indexOf(guessedChar)); 
 		  
-		  System.out.println("this shit nahh work bredda guess again");
+		  System.out.println("you answerd wrong");
 		    }
 		    
 		    
 		  
 		  
-		  
-/*
-		 1
-		 2
-		 3
-		 4
-		 5
-		 6
-		 7
-		 8
-		 9
-		 10
-		 
-		 
-	*/	 
 		 
 	}
 	

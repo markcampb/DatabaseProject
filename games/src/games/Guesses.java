@@ -34,7 +34,7 @@ public class Guesses {
 	public void setconstant(char constant) {
 		this.constant=constant;
 	} 
-	public static char Check() 
+	public static char Check()  // this basically runs thru the whole guess the letter part and checks to see if 1. what u enter is valid. and 2. if you tryna buy a vowel or not.
 	
 	{ 
 		System.out.println("do you wish to buy a vowel?");
@@ -46,7 +46,7 @@ public class Guesses {
 	    String checkIfBuying  = Scan.nextLine();  // reades in the answer if the player  is buying a vowel
 	    
 	   
-	    if (same (checkIfBuying,agree))
+	    if (same (checkIfBuying,agree)) 
 	    		{
 			    	
 			    	System.out.println("Enter the vowel you wish to buy");
@@ -73,7 +73,7 @@ public class Guesses {
 	    	   
 		    	   if (guessedChar == 'a'|| guessedChar== 'e'|| guessedChar=='i'|| guessedChar=='o'||guessedChar=='u')
 			   		{
-			   			System.out.println("Please do not enter a vowel");
+			   			System.out.println("Please do not enter a vowel you click the option that yuh did wa dat.... smh");
 			   		}
 		    	   else 
 		    	    {
@@ -85,7 +85,7 @@ public class Guesses {
 		   		}
 	    else
 			    {
-					System.out.println("stop type fuckry");
+					System.out.println("stop type f*$&ry");
 					
 				} 
 		return guessedChar;		 
